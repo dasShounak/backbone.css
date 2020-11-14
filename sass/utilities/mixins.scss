@@ -1,0 +1,104 @@
+//// RESPONSIVENESS
+// These are the default breakpoints. These can be changed according to the requirement
+$width-sm:  480px  !default;
+$width-md:  768px  !default;
+$width-lg:  1024px !default;
+$width-xl:  1200px !default;
+
+//// Mobile-first breakpoints
+// *Not required for extra-small screens (same as min-width: 0)
+
+// Small screens (481px and up)
+@mixin for-screens-above--sm {
+    @media screen and (min-width: $width-sm + 1) {
+        @content;
+    }
+}
+
+// Medium screens (769px and up)
+@mixin for-screens-above--md {
+    @media screen and (min-width: $width-md + 1) {
+        @content;
+    }
+}
+
+// Large screens (1025px and up)
+@mixin for-screens-above--lg {
+    @media screen and (min-width: $width-lg + 1) {
+        @content;
+    }
+}
+
+// Extra-large screens (1201px and up)
+@mixin for-screens-above--xl {
+    @media screen and (min-width: $width-xl + 1) {
+        @content;
+    }
+}
+
+//// Mobile-last breakpoints
+// Extra-small screens (480px and below)
+@mixin for-screens-below--sm {
+    @media screen and (max-width: $width-sm) {
+        @content;
+    }
+}
+
+// Small screens (768px and below)
+@mixin for-screens-below--md {
+    @media screen and (max-width: $width-md) {
+        @content;
+    }
+}
+
+// Medium screens (1024px and below)
+@mixin for-screens-below--lg {
+    @media screen and (max-width: $width-lg) {
+        @content;
+    }
+}
+
+// Large screens (1200px and below)
+@mixin for-screens-below--xl {
+    @media screen and (max-width: $width-xl) {
+        @content;
+    }
+}
+
+// *Not required for extra-large screens (no upper limit for width)
+
+//// Device specific mixins (only for each screen segment)
+// Extra-small screens (upto 480px)
+@mixin for--xs {
+    @media screen and (max-width: $width-sm) {
+        @content;
+    }
+}
+
+// Small screens (481px to 768px only)
+@mixin for--sm {
+    @media screen and (min-width: $width-sm + 1) and (max-width: $width-md) {
+        @content;
+    }
+}
+
+// Medium screens (769px to 1024px only)
+@mixin for--md {
+    @media screen and (min-width: $width-md + 1) and (max-width: $width-lg) {
+        @content;
+    }
+}
+
+// Large screens (1025px to 1200px only)
+@mixin for--lg {
+    @media screen and (min-width: $width-lg + 1) and (max-width: $width-xl) {
+        @content;
+    }
+}
+
+// Extra-large screens (1201px and up)
+@mixin for--xl {
+    @media screen and (min-width: $width-xl + 1) {
+        @content;
+    }
+}

@@ -1,0 +1,25 @@
+name: CI
+
+on: 
+
+  push:
+  
+    branches:
+      - dev
+      - hotfix
+
+jobs:
+  
+  build-css:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Compile CSS from SCSS source files
+        uses: gha-utilities/sass-build@v0.2.5
+        with:
+          source: backbone.scss
+          destination: css/backbone.css

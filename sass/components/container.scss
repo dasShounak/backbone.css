@@ -1,0 +1,98 @@
+@import "../utilities/mixins";
+
+// Fixed width
+.container {
+    @include for--xs {
+        max-width: 100%;
+    }
+
+    @include for-screens-above--sm {
+        max-width: $width-sm + 1 - 16px;
+    }
+
+    @include for-screens-above--md {
+        max-width: $width-md + 1 - 32px;
+    }
+
+    @include for-screens-above--lg {
+        max-width: $width-lg + 1 - 48px;
+    }
+
+    @include for-screens-above--xl {
+        max-width: $width-xl + 1 - 64px;
+    }
+
+    &-sm {
+        @extend .container;
+    }
+
+    &-md {
+        @extend .container;
+
+        @include for-screens-above--sm {
+            max-width: 100%;
+        }
+    }
+
+    &-lg {
+        @extend .container;
+
+        @include for-screens-above--md {
+            max-width: 100%;
+        }
+    }
+
+    &-xl {
+        @extend .container;
+
+        @include for-screens-above--lg {
+            max-width: 100%;
+        }
+    }
+}
+
+
+// Full width
+.container-stretch {
+    max-width: 100%;
+}
+
+//// Overflowing contents
+// Hidden
+.content-clip {
+    overflow: hidden;
+
+    &-x {
+        overflow-x: hidden;
+    }
+
+    &-y {
+        overflow-y: hidden;
+    }
+}
+
+// Scroll
+.content-scroll {
+    overflow: scroll;
+
+    &-x {
+        overflow-x: scroll;
+    }
+
+    &-y {
+        overflow-y: scroll;
+    }
+}
+
+// Auto
+.content-auto {
+    overflow: auto;
+
+    &-x {
+        overflow-x: auto;
+    }
+
+    &-y {
+        overflow-y: auto;
+    }
+}

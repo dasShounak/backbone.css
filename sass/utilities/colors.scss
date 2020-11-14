@@ -1,0 +1,83 @@
+// Color Variables
+
+$black:         rgb(15, 15, 15)    !default;
+$black-light:   rgb(40, 40, 40)    !default;
+$grey-dark:     rgb(78, 78, 78)    !default;
+$grey:          rgb(110, 110, 110) !default;
+$grey-light:    rgb(148, 148, 148) !default;
+$grey-lighter:  rgb(205, 205, 205) !default;
+$white:         rgb(245, 245, 245) !default;
+
+$red:        rgb(255, 53, 53) 	!default;
+$orange:     rgb(255, 133, 52) 	!default;
+$yellow:     rgb(255, 235, 57) 	!default;
+$lime:       rgb(160, 255, 51) 	!default;
+$green:      rgb(88, 255, 82) 	!default;
+$green-dark: rgb(45, 145, 58) 	!default;
+$cyan:       rgb(49, 255, 255) 	!default;
+$blue-light: rgb(73, 188, 255) 	!default;
+$blue:       rgb(80, 98, 255) 	!default;
+$blue-dark:  rgb(51, 50, 128) 	!default;
+$violet:     rgb(175, 77, 255)  !default;
+$pink:       rgb(255, 103, 242) !default;
+$magenta:    rgb(172, 39, 79)   !default;
+
+$important: $blue;
+$info:      $blue-light;
+$success:   $green;
+$danger:    $red;
+$warning:   $yellow;
+
+// Text Colors
+.text {
+	&-important {
+		color: $important;
+	}
+
+	&-info {
+		color: $info;
+	}
+
+	&-success {
+		color: $success;
+	}
+
+	&-danger {
+		color: $danger;
+	}
+
+	&-warning {
+		color: $warning;
+	}
+}
+
+// Background Colors
+.bg {
+	&-important {
+		background-color: lighten($important, 20%);
+	}
+
+	&-info {
+		background-color: lighten($info, 20%);
+	}
+
+	&-success {
+		background-color: lighten($success, 20%);
+	}
+
+	&-danger {
+		background-color: lighten($danger, 20%);
+	}
+
+	&-warning {
+		background-color: lighten($warning, 20%);
+	}
+
+	&-black {
+		background-color: lighten($black, 20%);
+	}
+
+	&-white {
+		background-color: lighten($white, 20%);
+	}
+}

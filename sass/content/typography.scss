@@ -1,0 +1,79 @@
+@import "../utilities/colors";
+
+// Jumbo titles (much larger font-size)
+$jumbo-title-sizes: ('1':'6.5rem', '2':'6rem', '3':'5.5rem', '4':'5rem', '5':'4.5rem', '6':'4rem');
+
+@each $value, $size in $jumbo-title-sizes {
+    .jumbo-#{$value} {
+        font-size: #{$size};
+        font-weight: lighter;
+    }
+}
+
+// Heading titles
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+// <small>
+small {
+    font-weight: lighter;
+}
+
+// <mark>
+mark {
+    background-color: lighten($blue, 30%);
+    padding: 4px 4px 0px 4px;
+}
+
+// <abbr>
+abbr {
+    text-decoration: none;
+    cursor: help;
+    border-bottom: 1px dotted $black;
+}
+
+// <blockquote>
+blockquote > {
+    .bq-text {
+        font-weight: normal;
+    }
+
+    .bq-footer {
+        font-weight: lighter;
+        font-style: italic;
+        font-size: 0.85rem;
+        color: $grey;
+
+        &:before {
+            content: "\2014\00A0\00A0"; // \2014 is the CSS code for long hyphen and \00A0 for non-breaking space
+        }
+    }
+}
+
+
+// Links
+a {
+    color: $blue;
+
+    &:hover {
+        color: lighten($blue, 15%);
+    }
+}
+
+// <code>
+code {
+    padding: 4px;
+    color: $grey-dark;
+    background-color: $grey-lighter;
+    border-radius: 2px;
+}
+
+// <kbd>
+kbd {
+    background-color: $black-light;
+    color: $white;
+    font-size: 1rem;
+    padding: 6px;
+    border-radius: 4px;
+}

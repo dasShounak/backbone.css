@@ -1,0 +1,39 @@
+@import "../utilities/colors";
+
+table, th, td {
+    border-bottom: 1px solid $grey-lighter;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+thead {
+    background-color: $grey-lighter;
+    border-bottom: 2px solid $grey-lighter;
+    border-top: 1px solid $grey-lighter;
+}
+
+// Bordered table
+[class^="table-bordered"] {
+    border: 1px solid $grey-lighter;
+}
+
+// Table with all sides bordered
+.table-bordered-columns {
+    th, td {
+        border: 1px solid $grey-lighter;
+    }
+}
+
+// Striped table (alternate table-body rows will have a grey background)
+.table-striped {
+    tbody tr:nth-child(odd) {
+        background-color: $grey-lighter;
+    }
+}
+
+// Hover rows (table-body rows will turn grey on mouse hover)
+.table-hover {
+    tbody tr:hover {
+        background-color: $grey-lighter;
+    }
+}

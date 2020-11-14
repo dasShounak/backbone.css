@@ -1,0 +1,62 @@
+@import "../utilities/mixins";
+
+$stack-columns-vertically-on-mobile: true !default; // Columns are stacked vertically by default on mobile devices.
+
+$column-gap: 0.75rem !default; // Column gap can be adjusted as per requirement
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); // backbone.css uses the 12 column grid layout. It is recommended NOT to change this value.
+    grid-gap: $column-gap;
+
+    @include for--xs {
+        @if $stack-columns-vertically-on-mobile == true {
+            grid-template-columns: 1fr;
+        } @else {
+            @for $i from 1 through 12 {
+                &.col-mob-#{$i} {
+                    grid-column: span #{$i}; // col-mob-* classes would be available ONLY if vertical stacking on mobile is disabled
+                }
+            }
+        }
+    }
+
+    @include for-screens-above--sm {
+        @for $i from 1 through 12 {
+            &.col-tab-#{$i} {
+                grid-column: span #{$i};
+            }
+        }
+    }
+
+    @include for-screens-above--md {
+        @for $i from 1 through 12 {
+            &.col-lap-#{$i} {
+                grid-column: span #{$i};
+            }
+        }
+    }
+
+    @include for-screens-above--lg {
+        @for $i from 1 through 12 {
+            &.col-desk-#{$i} {
+                grid-column: span #{$i};
+            }
+        }
+    }
+
+    @include for-screens-above--xl {
+        @for $i from 1 through 12 {
+            &.col-wide-#{$i} {
+                grid-column: span #{$i};
+            }
+        }
+    }
+}
+
+// row-auto class should be used only when equal-width columns are required. Refer docs for more details.
+.row-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    grid-gap: $column-gap;
+}

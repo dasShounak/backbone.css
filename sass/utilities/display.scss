@@ -1,0 +1,71 @@
+//// Specify elememt display type
+// Block
+.is-block {
+    display: block;
+
+    @include for--xs {
+        &-sm {
+            display: block;
+        }
+    }
+
+    @include for-screens-above--sm {
+        &-md {
+            display: block;
+        }
+    }
+
+    @include for-screens-above--md {
+        &-lg {
+            display: block;
+        }
+    }
+
+    @include for-screens-above--lg {
+        &-xl {
+            display: block;
+        }
+    }
+
+    &-inline {
+        display: inline-block;
+    }
+}
+
+// Flex
+.is-flex {
+    display: flex;
+
+    @include for--xs {
+        &-sm {
+            display: flex;
+        }
+    }
+
+    @include for-screens-above--sm {
+        &-md {
+            display: flex;
+        }
+    }
+
+    @include for-screens-above--md {
+        &-lg {
+            display: flex;
+        }
+    }
+
+    @include for-screens-above--lg {
+        &-xl {
+            display: flex;
+        }
+    }
+
+    &-inline {
+        display: inline-flex;
+    }
+}
+
+// Inline
+.is-inline {
+    display: inline;
+}
