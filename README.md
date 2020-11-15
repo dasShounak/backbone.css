@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="website/images/backbone.png">
+    <img src="website/images/backbone.png" width="400px">
     <br>
     <em>Backbone.css is a modern, responsive, CSS framework based on CSS Grid</em>
     <br>
